@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
+<html lang="ja" __gcrremoteframetoken="12474d3c79e04c932053ce349a2aa25f"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SOLERA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;500;600&amp;family=Noto+Sans+JP:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
@@ -1050,7 +1048,7 @@ kbd{
     <div class="hdr-actions">
       <button class="hdr-icon-btn" onclick="toggleSB()" title="カリキュラム">☰</button>
       <button class="hdr-icon-btn" onclick="showAbout()" title="SOLERAとは？">?</button>
-      <button class="hdr-icon-btn" id="gh-save-btn" onclick="ghSave()" oncontextmenu="resetGhToken(event)" ontouchstart="ghTouchStart()" ontouchend="ghTouchEnd()" title="GitHubに保存">SAVE</button>
+      <button class="hdr-icon-btn" id="gh-save-btn" onclick="ghSave()" oncontextmenu="resetGhToken(event)" ontouchstart="ghTouchStart()" ontouchend="ghTouchEnd()" title="GitHubに保存" disabled="">⏳</button>
     </div>
   </div>
   <div class="hdr-subbar"></div>
@@ -1061,7 +1059,135 @@ kbd{
 
   <div id="sb">
     <div class="sb-hdr">📚 A1 カリキュラム — 16単元</div>
-    <div class="sb-scroll" id="sblist"></div>
+    <div class="sb-scroll" id="sblist">
+    <div class="grp">
+      <div class="grp-lbl">Part 1 — 基礎の基礎</div>
+      
+        <button class="ubtn" id="u-alpha" onclick="selUnit('alpha')">
+          <span class="uicon">🔤</span>
+          <span class="utxt">アルファベットと発音</span>
+          
+        </button>
+        <button class="ubtn" id="u-greet" onclick="selUnit('greet')">
+          <span class="uicon">👋</span>
+          <span class="utxt">挨拶と自己紹介</span>
+          
+        </button>
+    </div>
+    <div class="grp">
+      <div class="grp-lbl">Part 2 — Ser・名詞・形容詞</div>
+      
+        <button class="ubtn" id="u-ser" onclick="selUnit('ser')">
+          <span class="uicon">🔷</span>
+          <span class="utxt">動詞 Ser（〜である）</span>
+          <span class="done">✓</span>
+        </button>
+        <button class="ubtn" id="u-noun" onclick="selUnit('noun')">
+          <span class="uicon">⚖️</span>
+          <span class="utxt">名詞の性と複数形</span>
+          
+        </button>
+        <button class="ubtn" id="u-qneg" onclick="selUnit('qneg')">
+          <span class="uicon">❓</span>
+          <span class="utxt">疑問文と否定文</span>
+          
+        </button>
+        <button class="ubtn" id="u-adj" onclick="selUnit('adj')">
+          <span class="uicon">🎨</span>
+          <span class="utxt">形容詞の性数一致</span>
+          
+        </button>
+    </div>
+    <div class="grp">
+      <div class="grp-lbl">Part 3 — Estar・冠詞・Tener・Ir</div>
+      
+        <button class="ubtn" id="u-estar" onclick="selUnit('estar')">
+          <span class="uicon">🔶</span>
+          <span class="utxt">動詞 Estar（状態・場所）</span>
+          
+        </button>
+        <button class="ubtn" id="u-art" onclick="selUnit('art')">
+          <span class="uicon">📝</span>
+          <span class="utxt">冠詞（el/la/un/una）</span>
+          
+        </button>
+        <button class="ubtn" id="u-tener" onclick="selUnit('tener')">
+          <span class="uicon">✋</span>
+          <span class="utxt">動詞 Tener（持っている）</span>
+          
+        </button>
+        <button class="ubtn" id="u-ir" onclick="selUnit('ir')">
+          <span class="uicon">🚀</span>
+          <span class="utxt">動詞 Ir（行く）＋近接未来</span>
+          
+        </button>
+    </div>
+    <div class="grp">
+      <div class="grp-lbl">Part 4 — 規則動詞 現在形</div>
+      
+        <button class="ubtn" id="u-ar" onclick="selUnit('ar')">
+          <span class="uicon">⚡</span>
+          <span class="utxt">規則動詞 -ar 現在形</span>
+          
+        </button>
+        <button class="ubtn" id="u-er_ir" onclick="selUnit('er_ir')">
+          <span class="uicon">⚡</span>
+          <span class="utxt">規則動詞 -er / -ir 現在形</span>
+          
+        </button>
+    </div>
+    <div class="grp">
+      <div class="grp-lbl">Part 5 — 数字・時間</div>
+      
+        <button class="ubtn" id="u-num" onclick="selUnit('num')">
+          <span class="uicon">🔢</span>
+          <span class="utxt">数字・年齢・曜日・月</span>
+          
+        </button>
+        <button class="ubtn" id="u-time" onclick="selUnit('time')">
+          <span class="uicon">🕐</span>
+          <span class="utxt">時刻の表現</span>
+          
+        </button>
+    </div>
+    <div class="grp">
+      <div class="grp-lbl">Part 6 — 所有・指示・gustar</div>
+      
+        <button class="ubtn" id="u-poss" onclick="selUnit('poss')">
+          <span class="uicon">🏷️</span>
+          <span class="utxt">所有詞（私の/あなたの…）</span>
+          
+        </button>
+        <button class="ubtn" id="u-dem" onclick="selUnit('dem')">
+          <span class="uicon">👈</span>
+          <span class="utxt">指示詞（この/その/あの）</span>
+          
+        </button>
+        <button class="ubtn" id="u-gust" onclick="selUnit('gust')">
+          <span class="uicon">❤️</span>
+          <span class="utxt">Gustar 型動詞（〜が好き）</span>
+          
+        </button>
+    </div>
+    <div class="grp">
+      <div class="grp-lbl">Part 7 — 場所・不規則・進行形</div>
+      
+        <button class="ubtn" id="u-hay" onclick="selUnit('hay')">
+          <span class="uicon">🏠</span>
+          <span class="utxt">Hay と場所の表現</span>
+          
+        </button>
+        <button class="ubtn" id="u-irreg" onclick="selUnit('irreg')">
+          <span class="uicon">⚙️</span>
+          <span class="utxt">主要不規則動詞（現在形）</span>
+          
+        </button>
+        <button class="ubtn" id="u-prog" onclick="selUnit('prog')">
+          <span class="uicon">▶️</span>
+          <span class="utxt">現在進行形（estar + -ndo）</span>
+          
+        </button>
+    </div></div>
   </div>
 
   <div id="main">
@@ -3132,11 +3258,11 @@ function showAbout(){
 }
 </script>
 <!-- GitHub設定モーダル -->
-<div id="gh-modal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;padding:20px;">
+<div id="gh-modal" style="display: none; position: fixed; inset: 0px; z-index: 500; background: rgba(0, 0, 0, 0.6); align-items: center; justify-content: center; padding: 20px;">
   <div style="background:#fff;border-radius:16px;padding:28px 24px;width:100%;max-width:360px;font-family:sans-serif;">
     <h2 style="font-size:16px;font-weight:700;margin-bottom:8px;">☁️ GitHub 合言葉を登録</h2>
     <p style="font-size:12px;color:#666;line-height:1.7;margin-bottom:16px;">GitHubで発行した合言葉（ghp_から始まる文字列）を入力してください。一度登録すれば次からは不要です。</p>
-    <input type="password" id="gh-token-input" placeholder="ghp_xxxxxxxxxxxx" style="width:100%;border:1px solid #d0d4dc;border-radius:8px;padding:10px 12px;font-size:13px;margin-bottom:8px;box-sizing:border-box;">
+    <input type="password" id="gh-token-input" placeholder="ghp_xxxxxxxxxxxx" style="width:100%;border:1px solid #d0d4dc;border-radius:8px;padding:10px 12px;font-size:13px;margin-bottom:8px;box-sizing:border-box;" __gcruniqueid="1">
     <p style="font-size:11px;color:#888;margin-bottom:20px;">📌 合言葉はこの端末にだけ保存されます</p>
     <div style="display:flex;gap:8px;">
       <button onclick="closeGhModal()" style="background:#f5f6f8;color:#555;border:none;border-radius:8px;padding:12px 16px;font-size:13px;cursor:pointer;">キャンセル</button>
@@ -3246,5 +3372,6 @@ function showSolToast(msg, type){
 }
 // ── GitHub保存機能 ここまで ──
 </script>
-</body>
-</html>
+
+
+<div id="sol-toast" style="position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: rgb(26, 23, 16); color: rgb(245, 240, 232); padding: 12px 24px; border-radius: 8px; font-size: 13px; font-family: sans-serif; z-index: 9999; opacity: 0; transition: opacity 0.4s; white-space: nowrap;">合言葉をリセットしました。もう一度SAVEを押してください。</div></body></html>
