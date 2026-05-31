@@ -1,4 +1,4 @@
-<html lang="ja" __gcrremoteframetoken="12474d3c79e04c932053ce349a2aa25f"><head>
+<html lang="ja" __gcrremoteframetoken="bd65f771bec1ad4c234cbf6c7940ffb2"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SOLERA</title>
@@ -1036,7 +1036,7 @@ kbd{
 ::-webkit-scrollbar-thumb:hover{ background: var(--accent-soft); }
 </style>
 </head>
-<body>
+<body data-__gcrweb-annotatedpagecontent-processed="FD5C9857807E323E773615A31EE1F95C">
 
 <!-- ── DARK HEADER (Case E) ── -->
 <div id="hdr">
@@ -1057,13 +1057,13 @@ kbd{
 <!-- ── APP BODY ── -->
 <div id="app">
 
-  <div id="sb">
+  <div id="sb" class="collapsed">
     <div class="sb-hdr">📚 A1 カリキュラム — 16単元</div>
     <div class="sb-scroll" id="sblist">
     <div class="grp">
       <div class="grp-lbl">Part 1 — 基礎の基礎</div>
       
-        <button class="ubtn" id="u-alpha" onclick="selUnit('alpha')">
+        <button class="ubtn active" id="u-alpha" onclick="selUnit('alpha')">
           <span class="uicon">🔤</span>
           <span class="utxt">アルファベットと発音</span>
           
@@ -1190,25 +1190,204 @@ kbd{
     </div></div>
   </div>
 
-  <div id="main">
-    <div id="toolbar">
+  <div id="main" class="visible">
+    <div id="toolbar" style="display: flex;">
       <button id="back-btn" onclick="goBack()" style="display:none;background:none;border:none;cursor:pointer;color:var(--accent);font-size:13px;font-family:inherit;padding:0 16px 0 0;flex-shrink:0;">← 一覧</button>
-      <div class="ttl" id="ttl"></div>
+      <div class="ttl" id="ttl"><span class="ttl-icon">🔤</span>アルファベットと発音<span class="ttl-sub">A1</span></div>
     </div>
-    <div id="tabs">
+    <div id="tabs" style="display: flex;">
       <div class="tab on" onclick="gotoTab('g',this)">文法解説</div>
       <div class="tab" onclick="gotoTab('q',this)">練習問題</div>
     </div>
     <div id="content">
-      <div class="ph">
-        <div class="ph-mark">SOLERA</div>
-        <div class="ph-line"></div>
-        <div class="ph-text">
-          左のカリキュラムから単元を選んでください。<br>
-          文法解説を読み、練習問題に挑む流れで進めます。
-        </div>
-      </div>
-    </div>
+    <div class="gram">
+<h3>はじめに — スペイン語の発音は実はやさしい</h3>
+<p>「外国語の発音」と聞くと身構えてしまいますが、安心してください。スペイン語は<strong style="color:var(--accent)">世界で一番読みやすい言語</strong>のひとつと言われています。理由はシンプルで、<strong>書いてある通りに読める</strong>からです。</p>
+<p>日本語のローマ字読みがほぼそのまま通用する場面も多いです。例：<span class="es">casa</span>（家）→「カサ」と読みます。</p>
+
+<h3>アルファベット 全27文字</h3>
+<p>スペイン語のアルファベットは、英語の26文字に <strong>Ñ</strong>（エニェ）が加わって全27文字です。</p>
+<div class="detail-block">
+<button class="more-btn" onclick="toggleDetail(this)"><span class="arrow">▶</span> 全27文字の一覧を見る</button>
+<div class="detail">
+<table><thead><tr><th>文字</th><th>名前</th><th>読み方</th></tr></thead><tbody>
+<tr><td>A a</td><td>a</td><td>ア</td></tr>
+<tr><td>B b</td><td>be</td><td>ベ</td></tr>
+<tr><td>C c</td><td>ce</td><td>セ</td></tr>
+<tr><td>D d</td><td>de</td><td>デ</td></tr>
+<tr><td>E e</td><td>e</td><td>エ</td></tr>
+<tr><td>F f</td><td>efe</td><td>エフェ</td></tr>
+<tr><td>G g</td><td>ge</td><td>へ</td></tr>
+<tr><td>H h</td><td>hache</td><td>アチェ</td></tr>
+<tr><td>I i</td><td>i</td><td>イ</td></tr>
+<tr><td>J j</td><td>jota</td><td>ホタ</td></tr>
+<tr><td>K k</td><td>ka</td><td>カ</td></tr>
+<tr><td>L l</td><td>ele</td><td>エレ</td></tr>
+<tr><td>M m</td><td>eme</td><td>エメ</td></tr>
+<tr><td>N n</td><td>ene</td><td>エネ</td></tr>
+<tr><td>Ñ ñ</td><td>eñe</td><td>エニェ</td></tr>
+<tr><td>O o</td><td>o</td><td>オ</td></tr>
+<tr><td>P p</td><td>pe</td><td>ペ</td></tr>
+<tr><td>Q q</td><td>cu</td><td>ク</td></tr>
+<tr><td>R r</td><td>erre</td><td>エレ</td></tr>
+<tr><td>S s</td><td>ese</td><td>エセ</td></tr>
+<tr><td>T t</td><td>te</td><td>テ</td></tr>
+<tr><td>U u</td><td>u</td><td>ウ</td></tr>
+<tr><td>V v</td><td>uve</td><td>ウベ</td></tr>
+<tr><td>W w</td><td>uve doble</td><td>ウベ ドブレ</td></tr>
+<tr><td>X x</td><td>equis</td><td>エキス</td></tr>
+<tr><td>Y y</td><td>ye / i griega</td><td>ジェ / イ グリエガ</td></tr>
+<tr><td>Z z</td><td>zeta</td><td>セタ</td></tr>
+</tbody></table>
+<div class="nbox">💡 <strong>余談：</strong> 1994年まで、スペイン語のアルファベットには <strong>Ch</strong> と <strong>Ll</strong> も独立した文字として数えられ、全29文字でした。今は2文字の組み合わせとして扱われています。</div>
+</div></div>
+
+<h3>母音は5つ、しかも超シンプル</h3>
+<p>日本語の「あいうえお」がそのまま通用します。これは英語学習者にとっては衝撃的にラクなポイント。</p>
+<div class="hbox">
+A → ア　／　E → エ　／　I → イ　／　O → オ　／　U → ウ
+</div>
+<p>英語のように「a」が「ア」になったり「エイ」になったりしません。<strong>常に同じ音</strong>です。</p>
+
+<h3>注意したい子音 — H と J と Ñ</h3>
+<p>子音もほとんどはローマ字読みでOKですが、いくつか日本語と違う読み方をするものがあります。まず重要な3つから。</p>
+
+<div class="hbox">
+<strong>H は完全に無音</strong>　書いてあっても音を出しません<br>
+&nbsp;&nbsp;<span class="es">hola</span> →「<strong>オラ</strong>」（×ホラ）<br>
+&nbsp;&nbsp;<span class="es">hospital</span> →「<strong>オスピタル</strong>」<br><br>
+
+<strong>J は喉の奥から出す「ハ」</strong><br>
+&nbsp;&nbsp;<span class="es">Japón</span> →「<strong>ハポン</strong>」<br>
+&nbsp;&nbsp;<span class="es">jamón</span> →「<strong>ハモン</strong>」（ハム）<br><br>
+
+<strong>Ñ は「ニャ」行</strong>　スペイン語固有の文字<br>
+&nbsp;&nbsp;<span class="es">año</span> →「<strong>アニョ</strong>」（年）<br>
+&nbsp;&nbsp;<span class="es">mañana</span> →「<strong>マニャーナ</strong>」（明日／朝）
+</div>
+
+<button class="more-btn" onclick="toggleDetail(this)"><span class="arrow">▶</span> なぜ Ñ を書き忘れると大変なのか</button>
+<div class="detail">
+<div class="nbox">⚠️ <strong>これは命に関わる違い：</strong> <span class="es">año</span>（年）と <span class="es">ano</span>（肛門）はÑの有無で意味が全く違います。「私は25歳です」を言うときに <span class="es">Tengo 25 anos</span> と書いてしまうと「私は25個の肛門を持っています」になります。Ñ は絶対忘れないように。</div>
+</div>
+
+<h3>B と V — 実は同じ音！</h3>
+<p>これはスペイン語の最大の驚きポイントかもしれません。B と V は<strong>書く時は違う文字ですが、読む時は全く同じ音</strong>です。両方とも日本語の「バ」行の音。</p>
+<div class="hbox">
+<span class="es">vino</span>（ワイン）→「<strong>ビノ</strong>」<br>
+<span class="es">vaca</span>（牛）→「<strong>バカ</strong>」<br>
+<span class="es">bueno</span>（良い）→「<strong>ブエノ</strong>」
+</div>
+<button class="more-btn" onclick="toggleDetail(this)"><span class="arrow">▶</span> ネイティブも迷うって本当？</button>
+<div class="detail">
+<div class="nbox">💡 <strong>余談：</strong> スペイン語ネイティブの子供たちも、書く時に「これはBだっけVだっけ？」とよく迷うそうです。スペイン語学校の先生は <span class="es">"V de vaca"</span>（vaca のV）、<span class="es">"B de burro"</span>（burro のB）と単語で区別を教えます。</div>
+</div>
+
+<h3>C と G — 後ろの母音で音が変わる</h3>
+<p>Cの読み方は、後ろにくる母音によって2種類に変わります。</p>
+<table><thead><tr><th>後ろの母音</th><th>C の音</th><th>例</th></tr></thead><tbody>
+<tr><td>ca, co, cu</td><td>カ・コ・ク</td><td>casa（カサ）、como（コモ）</td></tr>
+<tr><td>ce, ci</td><td>セ・シ</td><td>cinco（シンコ／5）、cena（セナ／夕食）</td></tr>
+</tbody></table>
+<p>G も同じパターンです。</p>
+<table><thead><tr><th>後ろの母音</th><th>G の音</th><th>例</th></tr></thead><tbody>
+<tr><td>ga, go, gu</td><td>ガ・ゴ・グ</td><td>gato（ガト／猫）、gusto（グスト）</td></tr>
+<tr><td>ge, gi</td><td>ヘ・ヒ</td><td>gente（ヘンテ／人々）、gigante（ヒガンテ）</td></tr>
+</tbody></table>
+<p>つまり <strong>ge, gi は J と同じ「ハ行」音</strong>になります。</p>
+
+<button class="more-btn" onclick="toggleDetail(this)"><span class="arrow">▶</span> 地域による発音の違い</button>
+<div class="detail">
+<div class="nbox">💡 中南米では ce, ci は普通に「セ・シ」と読みますが、スペイン本国では「θ」（英語の th のような音）になります。あなたが学んでいるのはメキシコのスペイン語なので、迷わず「セ・シ」でOK。</div>
+</div>
+
+<h3>Q — 必ず u とセット、u は読まない</h3>
+<p>スペイン語の Q は、<strong>必ず後ろに u を伴う</strong>ルールがあります。そして、<strong>その u は読みません</strong>。</p>
+<div class="hbox">
+<span class="es">que</span>（何）→「<strong>ケ</strong>」（×クエ）<br>
+<span class="es">queso</span>（チーズ）→「<strong>ケソ</strong>」<br>
+<span class="es">quince</span>（15）→「<strong>キンセ</strong>」<br>
+<span class="es">aquí</span>（ここ）→「<strong>アキ</strong>」
+</div>
+<p>「Q + u + e/i」で「ケ・キ」と覚えてしまうのが早道です。</p>
+
+<h3>R — 巻き舌の度合いが2種類</h3>
+<p>巻き舌（舌を震わせる音）はスペイン語の特徴です。位置によって強さが変わります。</p>
+<table><thead><tr><th>位置</th><th>音</th><th>例</th></tr></thead><tbody>
+<tr><td>語頭のR、または rr</td><td>強く巻く</td><td>rosa（ロッサ）、perro（ペッロ／犬）</td></tr>
+<tr><td>語中の単独 r</td><td>軽く弾く</td><td>pero（ペロ／しかし）、cara（カラ／顔）</td></tr>
+</tbody></table>
+<button class="more-btn" onclick="toggleDetail(this)"><span class="arrow">▶</span> R の強さで意味が変わる例</button>
+<div class="detail">
+<div class="nbox">💡 <strong>意味が変わる例：</strong> <span class="es">pero</span>（しかし）と <span class="es">perro</span>（犬）はRの強さで意味が変わります。最初はうまく巻けなくても大丈夫。日本人の多くは練習で必ずできるようになります。</div>
+</div>
+
+<button class="more-btn" onclick="toggleDetail(this)"><span class="arrow">▶</span> その他の子音（Z, LL, Y）も見ておく</button>
+<div class="detail">
+<h3>Z — メキシコでは「サ」行</h3>
+<div class="hbox">
+<span class="es">zapato</span>（靴）→「<strong>サパト</strong>」<br>
+<span class="es">corazón</span>（心）→「<strong>コラソン</strong>」
+</div>
+<h3>LL — 「ヤ」または「ジャ」</h3>
+<div class="hbox">
+<span class="es">llave</span>（鍵）→「<strong>ヤベ</strong>」または「<strong>ジャベ</strong>」<br>
+<span class="es">paella</span>（パエリア）→「<strong>パエヤ</strong>」
+</div>
+<h3>Y — Lと似た音</h3>
+<div class="hbox">
+<span class="es">yo</span>（私）→「<strong>ヨ</strong>」または「<strong>ジョ</strong>」<br>
+<span class="es">muy</span>（とても）→「<strong>ムイ</strong>」（語末なので「イ」）
+</div>
+</div>
+
+<h3>アクセントの位置 — 3つのルールだけ</h3>
+<p>スペイン語の単語には、必ずどこか一箇所「強く読む音節」があります。これを「アクセント」と呼びます。「音節」は、ひとまとまりに発音する単位で、たとえば「ca-sa」は2音節です。</p>
+<p>どの音節を強く読むかは、たった3つのルールで決まります。</p>
+
+<div class="hbox">
+<strong>ルール①</strong> <strong>母音・N・S</strong> で終わる単語 → <strong>後ろから2番目</strong>を強く<br>
+&nbsp;&nbsp;<span class="es">ca-sa</span> → 「<strong>カ</strong>サ」（カを強く）<br>
+&nbsp;&nbsp;<span class="es">li-bro</span> → 「<strong>リ</strong>ブロ」<br><br>
+
+<strong>ルール②</strong> <strong>それ以外の子音</strong>で終わる単語 → <strong>最後の音節</strong>を強く<br>
+&nbsp;&nbsp;<span class="es">ha-blar</span> → 「ハ<strong>ブラル</strong>」<br>
+&nbsp;&nbsp;<span class="es">co-mer</span> → 「コ<strong>メル</strong>」<br><br>
+
+<strong>ルール③</strong> アクセント記号「<strong>´</strong>」がある単語 → <strong>記号があるところ</strong>を強く<br>
+&nbsp;&nbsp;<span class="es">ca-<strong>fé</strong></span> → 「ca-<strong>フェ</strong>」<br>
+&nbsp;&nbsp;<span class="es"><strong>lá</strong>-piz</span> → 「<strong>ラ</strong>-ピス」<br>
+&nbsp;&nbsp;<span class="es">Ja-<strong>pón</strong></span> → 「ハ-<strong>ポン</strong>」
+</div>
+<div class="nbox">💡 アクセント記号は<strong>「例外の標識」</strong>だと思ってください。ルール①②に従わない単語にだけ付きます。記号があれば「あ、ルール通りじゃないのね」と思って、書いてある通りに強く読みます。</div>
+
+<button class="more-btn" onclick="toggleDetail(this)"><span class="arrow">▶</span> 同じ綴りでも記号で意味が変わる単語</button>
+<div class="detail">
+<table><thead><tr><th>記号あり</th><th>意味</th><th>記号なし</th><th>意味</th></tr></thead><tbody>
+<tr><td>sí</td><td>はい</td><td>si</td><td>もし</td></tr>
+<tr><td>tú</td><td>君</td><td>tu</td><td>君の</td></tr>
+<tr><td>él</td><td>彼</td><td>el</td><td>その（冠詞）</td></tr>
+<tr><td>qué</td><td>何？（疑問）</td><td>que</td><td>〜ということ</td></tr>
+<tr><td>cómo</td><td>どのように？</td><td>como</td><td>〜のように</td></tr>
+</tbody></table>
+<p>これらは記号を見落とすと意味が変わってしまうので注意しましょう。</p>
+</div>
+
+<h3>まとめ</h3>
+<p>すべてを完璧に覚える必要はありません。練習問題を解きながら、よく使う単語を通して自然に身につくのが理想です。</p>
+<div class="hbox">
+✓ <strong>H は読まない</strong><br>
+✓ <strong>B と V は同じ音</strong><br>
+✓ <strong>Ñ は「ニャ」行</strong>（年と肛門の違い！）<br>
+✓ <strong>Q のあとの U は読まない</strong>（quince → キンセ）<br>
+✓ <strong>母音・N・S 終わり → 後ろから2番目</strong><br>
+✓ <strong>それ以外 → 最後の音節</strong><br>
+✓ <strong>アクセント記号 → そこを強く読む</strong>
+</div>
+</div>
+    <div style="margin-top:32px">
+      <button class="btn p" onclick="gotoTabId('q')">練習問題へ →</button>
+    </div></div>
   </div>
 
 </div>
@@ -3258,7 +3437,7 @@ function showAbout(){
 }
 </script>
 <!-- GitHub設定モーダル -->
-<div id="gh-modal" style="display: none; position: fixed; inset: 0px; z-index: 500; background: rgba(0, 0, 0, 0.6); align-items: center; justify-content: center; padding: 20px;">
+<div id="gh-modal" style="display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;padding:20px;">
   <div style="background:#fff;border-radius:16px;padding:28px 24px;width:100%;max-width:360px;font-family:sans-serif;">
     <h2 style="font-size:16px;font-weight:700;margin-bottom:8px;">☁️ GitHub 合言葉を登録</h2>
     <p style="font-size:12px;color:#666;line-height:1.7;margin-bottom:16px;">GitHubで発行した合言葉（ghp_から始まる文字列）を入力してください。一度登録すれば次からは不要です。</p>
@@ -3374,4 +3553,4 @@ function showSolToast(msg, type){
 </script>
 
 
-<div id="sol-toast" style="position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: rgb(26, 23, 16); color: rgb(245, 240, 232); padding: 12px 24px; border-radius: 8px; font-size: 13px; font-family: sans-serif; z-index: 9999; opacity: 0; transition: opacity 0.4s; white-space: nowrap;">合言葉をリセットしました。もう一度SAVEを押してください。</div></body></html>
+</body></html>
